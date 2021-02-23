@@ -235,6 +235,6 @@ Built using Godot 3.2.3
 Tweening, screen shake, music, and sound effects
 
 ## Created by 
-Jason Francis
+Jalen Slutzky
 
 ```
