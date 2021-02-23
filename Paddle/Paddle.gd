@@ -8,7 +8,7 @@ onready var collision_transform = $CollisionShape2D.get_transform().get_scale()
 
 onready var target_y = position.y
 
-var color = Color(1,1,1,1)
+var color = Color8(173,181,189)
 
 
 func _ready():
@@ -40,4 +40,7 @@ func update_color():
 		$Color.color = Color(1,1,1,1)
 
 func emit_particle(pos):
-	pass
+	if HUD.particle_paddle:
+		get_parent().find_node("Particles2D").flobal_postion = pos
+		get_parent().find_node("Particles2d").emitting = true
+		get_parent().find_node("Particles2d").look_at(pos)
